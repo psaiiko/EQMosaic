@@ -9,7 +9,9 @@ This tool uses DLL injection to:
 * Uses a similar offset system and auto login system that MQ uses
 * Overrides files APIs to redirect eqini files so each instance can have its own settings
 
-This will get your account flag for 3rd party tools use on Everquest. 
+This will get your account flagged for 3rd party tools use on Everquest. 
+
+## Future updates
 
 Offsets and repo won't be maintained in the future.
 
