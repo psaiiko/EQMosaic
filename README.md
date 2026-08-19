@@ -1,4 +1,4 @@
-# EQMosaiq
+# EQMosaic
 
 ## Disclaimer
 
