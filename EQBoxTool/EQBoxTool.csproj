@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>appicon.ico</ApplicationIcon>
+    <AssemblyName>EQBoxTool</AssemblyName>
+    <RootNamespace>EQBoxTool</RootNamespace>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Management" Version="10.0.5" />
+    <PackageReference Include="Vortice.Direct3D11" Version="3.8.3" />
+    <PackageReference Include="Vortice.D3DCompiler" Version="3.8.3" />
+    <PackageReference Include="Vortice.DXGI" Version="3.8.3" />
+    <PackageReference Include="Vortice.Mathematics" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EQScreenOverlay\EQScreenOverlay.vcxproj"
+                      Condition="'$(DesignTimeBuild)' != 'true'">
+      <Project>{329E226F-8703-4337-85FA-B827DB7BA580}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Graphics\ViewportShader.vs.hlsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Graphics\ViewportShader.ps.hlsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <Target Name="CopyOverlayDll"
+          BeforeTargets="BeforeBuild"
+          Condition="'$(DesignTimeBuild)' != 'true'"
+          Inputs="$(MSBuildProjectDirectory)\..\x64\$(Configuration)\EQMosaic.dll"
+          Outputs="$(TargetDir)EQMosaic.dll">
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\..\x64\$(Configuration)\EQMosaic.dll"
+          DestinationFiles="$(TargetDir)EQMosaic.dll"
+          SkipUnchangedFiles="true" />
+  </Target>
+</Project>

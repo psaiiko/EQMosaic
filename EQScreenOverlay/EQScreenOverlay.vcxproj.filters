@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{908e4fb9-0c24-440d-b1db-9a74840f0f23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Precom headers">
+      <UniqueIdentifier>{92db2e88-23f8-44a3-8294-b6638ba182e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Everquest">
+      <UniqueIdentifier>{ef1908fd-3a8f-49a3-84f4-8ad41412bcf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Everquest\AutoLogin">
+      <UniqueIdentifier>{b807c5e4-1dc8-4b96-9000-254bc0d4ffba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Console">
+      <UniqueIdentifier>{640feb78-a521-4182-a361-7b5c65ecc8ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\File Redirection">
+      <UniqueIdentifier>{3af6a1b0-c28e-4e90-bfbb-3788981c9981}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Misc">
+      <UniqueIdentifier>{4fde0799-8279-48f4-86ab-fe0a61ac6c0a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutoLogin\AutoLogin.h">
+      <Filter>Sources\Everquest\AutoLogin</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Sources\Precom headers</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoLogin\EQGameInterface.h">
+      <Filter>Sources\Everquest</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoLogin\EQGameOffsets.h">
+      <Filter>Sources\Everquest</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoLogin\EQTypes.h">
+      <Filter>Sources\Everquest</Filter>
+    </ClInclude>
+    <ClInclude Include="LogConsole.h">
+      <Filter>Sources\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="FileRedirection.h">
+      <Filter>Sources\File Redirection</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h" />
+    <ClInclude Include="framework.h">
+      <Filter>Sources\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="DX11VTable.h">
+      <Filter>Sources\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoLogin\EQGameOffsets_eqgame.h">
+      <Filter>Sources\Everquest</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoLogin\EQGameOffsets_eqmain.h">
+      <Filter>Sources\Everquest</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutoLogin\AutoLogin.cpp">
+      <Filter>Sources\Everquest\AutoLogin</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Sources\Precom headers</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoLogin\EQGameInterface.cpp">
+      <Filter>Sources\Everquest</Filter>
+    </ClCompile>
+    <ClCompile Include="LogConsole.cpp">
+      <Filter>Sources\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="FileRedirection.cpp">
+      <Filter>Sources\File Redirection</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp" />
+  </ItemGroup>
+</Project>
